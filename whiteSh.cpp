@@ -53,7 +53,22 @@ int main() {
         }
     }
 
-    if(c2_in_1 || c3_in_1) std::cout << "NO" << std::endl; else {
-        
+    if(c2_in_1 || c3_in_1) std::cout << "YES" << std::endl; else {
+        std::cout << "here" << std::endl;
+        // notice no corners of the black sqares are in the whit square.
+        bool c2_over_c3 = false;
+        if(y_4 > y_6) {
+            c2_over_c3 = true;
+        }
+
+        if(c2_over_c3 == true) {
+            if(y_6 >= y_3) {
+                std::cout << "NO" << std::endl;
+            }else std::cout << "YES" << std::endl;
+        }else {
+            if(y_6 <= y_3) {
+                std::cout << "NO" << std::endl;
+            }else std::cout << "YES" << std::endl;
+        }
     }
 }
